@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "generate": "deno run generate.ts"
+    "generate": "deno run generate.ts",
+    "lint": "deno check generate.ts && deno lint ."
   }
 }

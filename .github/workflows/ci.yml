@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Lint
+        run: |
+          deno task lint
+
+      - name: Generate avatar
+        run: |
+          deno --version
+          deno task generate > __avatar.svg
+      
+      - name: Check if avatar up to date
+        run: |
+          diff __avatar.svg avatar.svg
