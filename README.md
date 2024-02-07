@@ -1,6 +1,8 @@
 # avatar
 
-![shilangyu's avatar](./avatar.svg)
+<p align="center">
+  <img src="./avatar.svg" alt="shilangyu's avatar">
+</p>
 
 ## history
 
