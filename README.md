@@ -11,5 +11,5 @@ Long ago when I was first learning to code, I was into watching [The Coding trai
 All that I had left from this project was a [single png file](./original.png), everything else got lost. This repository tries to faithfully restore the original avatar in a vector format.
 
 ```
-deno task generate
+deno task generate avatar
 ```

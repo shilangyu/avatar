@@ -18,13 +18,15 @@ jobs:
 
       - name: Lint
         run: |
+          deno --version
           deno task lint
 
-      - name: Generate avatar
+      - name: Generate assets
         run: |
-          deno --version
-          deno task generate > __avatar.svg
+          deno task generate avatar > __avatar.svg
+          deno task generate favicon > __favicon.svg
       
-      - name: Check if avatar up to date
+      - name: Check if assets up to date
         run: |
           diff __avatar.svg avatar.svg
+          diff __favicon.svg favicon.svg
